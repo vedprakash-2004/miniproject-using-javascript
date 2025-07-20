@@ -40,7 +40,8 @@ function levelUp() {
 }
 
 function btnPress (){
-    console.log("btn was pressed");
+    let btn = this;
+    btnFlash(btn);
 }
 let allBts = document.querySelectorAll(".btn");
 for (btn of allBts){
