@@ -39,6 +39,10 @@ function levelUp() {
     btnFlash(random);
 }
 
-function btnPress {
+function btnPress (){
     console.log("btn was pressed");
+}
+let allBts = document.querySelectorAll(".btn");
+for (btn of allBts){
+    btn.addEventListener("click", btnPress);
 }
