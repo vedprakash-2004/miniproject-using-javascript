@@ -25,6 +25,14 @@ function btnFlash(btn){
 
 }
 
+function gameFlash(btn){
+    btn.classList.add("userflash");
+    setTimeout(function(){
+        btn.classList.remove("userflash");
+    },1000);
+
+}
+
 function levelUp() {
     level++;
     h2.innerText = `Level ${level}`;
@@ -41,7 +49,7 @@ function levelUp() {
 
 function btnPress (){
     let btn = this;
-    btnFlash(btn);
+    gameFlash(btn);
 }
 let allBts = document.querySelectorAll(".btn");
 for (btn of allBts){
