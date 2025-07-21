@@ -47,14 +47,21 @@ function levelUp() {
     gameFlash(ranBtn);
 }
 
+function checkAns() {
+    console.log("curr level :", level);
+}
+
 function btnPress (){
     console.log(this);
     let btn = this;
     userFlash(btn);
 
     userColor = btn.getAttribute("id");
-    console.log(userColor);
+    userSeq.push(userColor);
+    checkAns();
 }
+
+
 let allBts = document.querySelectorAll(".btn");
 for (btn of allBts){
     btn.addEventListener("click", btnPress);
